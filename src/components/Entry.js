@@ -12,7 +12,7 @@ export const Entry = ({ entry, moods }) => {
       <div className="entry__concept">{entry.concept}</div>
       <div className="entry__entry">{entry.entry}</div>
       <div className="entry__date">{entry.date}</div>
-      <div className="entry__mood">{mood.label}</div>
+      <div className="entry__mood">{entry.mood.mood}</div>
 
       <button onClick={
         () => {
