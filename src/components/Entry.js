@@ -25,5 +25,5 @@ export const Entry = ({ entry, moods }) => {
         }
       }>Edit</button>
     </section>
-  )
+  )  
 };
