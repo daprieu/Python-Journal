@@ -36,19 +36,21 @@ export const EntryForm = (props) => {
 
     const constructNewEntry = () => {
 
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+
         if (editMode) {
             updateEntry({
                 id: entry.id,
+                date: entry.date,
                 concept: entry.concept,
                 entry: entry.entry,
-                date: entry.date,
                 mood_id: parseInt(entry.mood_id)
             })
         } else {
             addEntry({
+                date: (new Date()).toLocaleString(`en-US`, options),
                 concept: entry.concept,
                 entry: entry.entry,
-                date: Date.now(),
                 mood_id: parseInt(entry.mood_id)
             })
         }
